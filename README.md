@@ -116,6 +116,23 @@ To schedule this script on Linux or macOS:
 - Access to the latest models and features
 - Ability to set monthly spending limits to control costs
 
+## Gmail SMTP & App Passwords
+
+If you are using a Gmail account to send emails and have two-factor authentication (2FA) enabled, you must use an **App Password** instead of your regular account password for SMTP authentication.
+
+**How to generate and use a Gmail App Password:**
+
+1. Go to your [Google Account Security page](https://myaccount.google.com/security).
+2. Under "Signing in to Google", find **App passwords**. (You may need to sign in again.) [here](https://support.google.com/accounts/answer/185833?hl=en)
+3. Generate a new app password for "Mail" and your device/app.
+4. Use this generated password as your `SENDER_PASSWORD` in your `.env` file or environment variables.
+5. Ensure your `SENDER_EMAIL` is your full Gmail address and SMTP settings are:
+   - SMTP server: `smtp.gmail.com`
+   - Port: `465` (SSL) or `587` (TLS)
+   - Use SSL/TLS as appropriate
+
+For more details, see the [Gmail support page](https://support.google.com/mail/?p=InvalidSecondFactor).
+
 ## Security Notes
 
 - For Gmail, you need to use an App Password if you have 2-factor authentication enabled
