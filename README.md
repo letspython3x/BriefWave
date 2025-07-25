@@ -79,9 +79,9 @@ To schedule this script to run automatically on Windows:
 3. Enter a name and description for the task
 4. Select the trigger (Daily, Weekly, etc.)
 5. Select "Start a program" as the action
-6. Browse to your Python executable (e.g., `C:\Python39\python.exe`)
-7. Add the full path to your script in the "Add arguments" field (e.g., `C:\path\to\it-circulars-automation\main.py`)
-8. Set the "Start in" field to your script's directory (e.g., `C:\path\to\it-circulars-automation`)
+6. Browse to your Python executable (e.g., `D:\BriefWave\venv\Scripts\python.exe`)
+7. Add the full path to your script in the "Add arguments" field (e.g., `D:\BriefWave\main.py`)
+8. Set the "Start in" field to your script's directory (e.g., `D:\BriefWave`)
 9. Complete the wizard and check "Open the Properties dialog" before finishing
 10. In the Properties dialog, you can set additional options like running whether the user is logged in or not
 
