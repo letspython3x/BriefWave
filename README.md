@@ -66,6 +66,8 @@ BriefWave/
 │   └── utils/              # Utility functions
 │       ├── __init__.py
 │       └── html_formatter.py # HTML formatting utilities
+└── README.md               # Project documentation
+└── run_single_file.py      # A single-file script that orchestrates the automation process
 ```
 
 ## Scheduling
@@ -80,7 +82,7 @@ To schedule this script to run automatically on Windows:
 4. Select the trigger (Daily, Weekly, etc.)
 5. Select "Start a program" as the action
 6. Browse to your Python executable (e.g., `D:\BriefWave\venv\Scripts\python.exe`)
-7. Add the full path to your script in the "Add arguments" field (e.g., `D:\BriefWave\main.py`)
+7. Add the full path to your script in the "Add arguments" field (e.g., `D:\BriefWave\run_single_file.py`)
 8. Set the "Start in" field to your script's directory (e.g., `D:\BriefWave`)
 9. Complete the wizard and check "Open the Properties dialog" before finishing
 10. In the Properties dialog, you can set additional options like running whether the user is logged in or not
@@ -97,7 +99,7 @@ To schedule this script on Linux or macOS:
 2. Add a line to run the script at your desired schedule:
    ```
    # Run daily at 8 AM
-   0 8 * * * cd /path/to/it-circulars-automation && /usr/bin/python3 main.py >> /path/to/it-circulars-automation/cron.log 2>&1
+   0 8 * * * cd /path/to/BriefWave && /usr/bin/python3 main.py >> /path/to/BriefWave/cron.log 2>&1
    ```
 
 ## OpenAI API Prerequisites
